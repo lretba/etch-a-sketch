@@ -7,7 +7,7 @@ For more reference, visit https://www.theodinproject.com/lessons/foundations-etc
 ===========
 
 [DONE] Follow our instructions on setting up your project’s GitHub repository.
-[CURRENTLY WORKING ON] Create a webpage with a 16x16 grid of square divs. 
+[DONE] Create a webpage with a 16x16 grid of square divs. 
     Create the divs using JavaScript. 
     Don’t try to create them by hand by copying and pasting them in your HTML file! 
     It’s best to put your grid squares inside a “container” div. 
