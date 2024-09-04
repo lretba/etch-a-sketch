@@ -20,7 +20,7 @@ for (let i = 0; i < (numberOfCells); i++) {
 const cells = document.querySelectorAll(".cell");
 
 // add EventListener to call changeCellAppearance on each cell
-cells.forEach((cell) = {
+cells.forEach((cell) => {
     cell.addEventListener("mouseover", (e) => {
         changeCellAppearance(e.target);
     })
