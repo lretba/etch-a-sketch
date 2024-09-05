@@ -4,10 +4,16 @@ let numberOfCells = (dimension * dimension);
 
 const containerDiv = document.querySelector(".container");
 
+// check if given number is less than 100; if yes, create grid; if no, send popup and tell user to give a number < 100 
 for (let i = 0; i < (numberOfCells); i++) {
-    let gridCell = document.createElement("div");
-    gridCell.classList.add("cell", "grid");
-    containerDiv.appendChild(gridCell);
+        if (dimension < 100) {
+            let gridCell = document.createElement("div");
+            gridCell.classList.add("cell", "grid");
+            containerDiv.appendChild(gridCell);
+        }
+        else {
+            window.alert("Please use a number that is smaller than 100 (to prevent the browser from being overloaded). Thank you!");
+        }
 }
 
 
