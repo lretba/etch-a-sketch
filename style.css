@@ -12,7 +12,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin: 25px;
+    margin: 25px auto;
+    width: 500px;
+    height: 500px;
 }
 
 .cell {
