@@ -15,7 +15,7 @@ For more reference, visit https://www.theodinproject.com/lessons/foundations-etc
     Use Flexbox to make the divs appear as a grid (versus just one on each line). Despite the name, do not be tempted to research or use CSS Grid, as it will be taught in a later lesson after the foundations path. This project is an opportunity specifically to practice Flexbox!
     Be careful with borders and margins, as they can adjust the size of the squares!
 
-[CURRENT]
+[DONE]
 Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
 Hint: “Hovering” is what happens when your mouse enters a div and ends when your mouse leaves it. You can set up event listeners for either of those events as a starting point.
 There are multiple ways to change the color of the divs, including:

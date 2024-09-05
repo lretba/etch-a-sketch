@@ -19,3 +19,7 @@
     flex: 1 0 6.25%;
     aspect-ratio: 1/1;
 }
+
+.mouseoverCell {
+    background-color: indigo;
+}

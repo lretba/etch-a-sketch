@@ -15,6 +15,9 @@ for (let i = 0; i < (numberOfCells); i++) {
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them
 
 // function changeCellAppearance still needs to be created
+function changeCellAppearance(targetCell) {
+    targetCell.classList.add("mouseoverCell");
+}
 
 // select cells
 const cells = document.querySelectorAll(".cell");
