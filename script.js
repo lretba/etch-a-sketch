@@ -34,3 +34,17 @@ cells.forEach((cell) => {
         changeCellAppearance(e.target);
     })
 })
+
+// create function(s) to prompt user for new grid size and change grid size 
+
+
+// select first button
+
+
+// add EventListener to first button
+
+
+// create function to remove mouseoverCell class (in order to reset the grid)
+function resetGrid() {
+    console.log("This will later on reset the grid.")
+}
