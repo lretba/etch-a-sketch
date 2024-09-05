@@ -25,3 +25,11 @@
 .mouseoverCell {
     background-color: indigo;
 }
+
+h1 {
+    font-weight: bold;
+    font-size: 3em;
+    font-family: "Roboto", sans-serif;
+    margin: 30px 0 25px 0;
+    text-align: center;
+}
