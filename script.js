@@ -5,22 +5,27 @@ let numberOfCells = (dimension * dimension);
 const containerDiv = document.querySelector(".container");
 
 // check if given number is less than 100; if yes, create grid; if no, send popup and tell user to give a number < 100 
+function createGrid(dimension) {
 for (let i = 0; i < (numberOfCells); i++) {
         if (dimension < 100) {
             let gridCell = document.createElement("div");
             gridCell.classList.add("cell", "grid");
+            gridCell.textContent = i;
             containerDiv.appendChild(gridCell);
         }
         else {
             window.alert("Please use a number that is smaller than 100 (to prevent the browser from being overloaded). Thank you!");
+            break;
         }
 }
+}
+
+// initially load a grid with the default dimension of 16
+createGrid(dimension);
 
 
 
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them
-
-// function changeCellAppearance still needs to be created
 function changeCellAppearance(targetCell) {
     targetCell.classList.add("mouseoverCell");
 }
@@ -35,20 +40,21 @@ cells.forEach((cell) => {
     })
 })
 
-
-
 // select resize button
 const resizeButton = document.querySelector("#resizeButton");
 
 // add EventListener to resize button
-function doSomething() {
-    console.log("The resize button was clicked.")
-}
-
-resizeButton.addEventListener("click", doSomething);
+resizeButton.addEventListener("click", resizeGrid);
 
 // create function(s) to prompt user for new grid size and change grid size 
-
+function resizeGrid() {
+    resetGrid();
+    dimension = prompt("Which resolution would you like? Please give the number for one axis, it will be squared automatically.");
+    createGrid(dimension);
+    // functionality to replace the existing grid node is still missing (remove and add the newly created grid as a replacement)
+    // it seems that dimension is not being replaced -> scope?
+    // eventlisteners need to be added to the new cells
+}
 
 // select reset button
 const resetButton = document.querySelector("#resetButton");

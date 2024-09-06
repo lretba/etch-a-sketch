@@ -21,11 +21,11 @@
     align-items: stretch;
     margin: 25px auto;
     width: 500px;
-    height: 500px;
+    max-height: 500px;
 }
 
 .cell {
-    flex: 1 0 6.25%;
+    flex: 1 1 6.25%;
     aspect-ratio: 1/1;
 }
 
