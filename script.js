@@ -38,14 +38,14 @@ cells.forEach((cell) => {
 // create function(s) to prompt user for new grid size and change grid size 
 
 
-// select first button
+// select reset button
 const resetButton = document.querySelector("#resetButton");
 
-// add EventListener to first button
-resetButton.addEventListener("click", resetGrid());
+// add EventListener to reset button
+resetButton.addEventListener("click", resetGrid);
 
 
 // create function to remove mouseoverCell class (in order to reset the grid)
 function resetGrid() {
-    console.log("This will later on reset the grid.")
+    console.log("resetbutton was clicked");
 }
