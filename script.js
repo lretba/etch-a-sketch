@@ -39,9 +39,10 @@ cells.forEach((cell) => {
 
 
 // select first button
-
+const resetButton = document.querySelector("#resetButton");
 
 // add EventListener to first button
+resetButton.addEventListener("click", resetGrid());
 
 
 // create function to remove mouseoverCell class (in order to reset the grid)
