@@ -35,6 +35,18 @@ cells.forEach((cell) => {
     })
 })
 
+
+
+// select resize button
+const resizeButton = document.querySelector("#resizeButton");
+
+// add EventListener to resize button
+function doSomething() {
+    console.log("The resize button was clicked.")
+}
+
+resizeButton.addEventListener("click", doSomething);
+
 // create function(s) to prompt user for new grid size and change grid size 
 
 
