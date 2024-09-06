@@ -47,5 +47,7 @@ resetButton.addEventListener("click", resetGrid);
 
 // create function to remove mouseoverCell class (in order to reset the grid)
 function resetGrid() {
-    console.log("resetbutton was clicked");
+    cells.forEach((cell) => {
+        cell.classList.remove("mouseoverCell");
+    })
 }
