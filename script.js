@@ -3,21 +3,19 @@ let dimension = 16;
 
 const containerDiv = document.querySelector(".container");
 
-// check if given number is less than 100; if yes, create grid; if no, send popup and tell user to give a number < 100 
+
 function createGrid(dimension) {
-for (let i = 0; i < ( (dimension*dimension) ); i++) {
-        if (dimension < 100) {
-            let gridCell = document.createElement("div");
+    for (i = 0; i < dimension; i++) {
+        let gridRow = document.createElement("div");
+        for (let i = 0; i < dimension; i++) {
+            let gridCell = document.createElement("div")
             gridCell.classList.add("cell", "grid");
-            gridCell.textContent = i;
-            containerDiv.appendChild(gridCell);
-        }
-        else {
-            window.alert("Please use a number that is smaller than 100 (to prevent the browser from being overloaded). Thank you!");
-            break;
-        }
-}
-}
+            gridRow.appendChild(gridCell);
+            }
+        gridRow.classList.add("flexrow");
+        containerDiv.appendChild(gridRow);
+    }
+ };
 
 // initially load a grid with the default dimension
 createGrid(dimension);
