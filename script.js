@@ -1,12 +1,11 @@
 // Create 16x16 cells and append them to the container div
 let dimension = 16;
-let numberOfCells = (dimension * dimension);
 
 const containerDiv = document.querySelector(".container");
 
 // check if given number is less than 100; if yes, create grid; if no, send popup and tell user to give a number < 100 
 function createGrid(dimension) {
-for (let i = 0; i < (numberOfCells); i++) {
+for (let i = 0; i < ( (dimension*dimension) ); i++) {
         if (dimension < 100) {
             let gridCell = document.createElement("div");
             gridCell.classList.add("cell", "grid");
@@ -46,14 +45,23 @@ const resizeButton = document.querySelector("#resizeButton");
 // add EventListener to resize button
 resizeButton.addEventListener("click", resizeGrid);
 
-// create function(s) to prompt user for new grid size and change grid size 
 function resizeGrid() {
-    resetGrid();
-    dimension = prompt("Which resolution would you like? Please give the number for one axis, it will be squared automatically.");
+    changeDimension();
+    replaceGrid();
+    // console.log("Function resizeGrid was called.");
+}
+
+
+// create function(s) to prompt user for new grid size and change grid size 
+function changeDimension() {
+    dimension = Number(prompt("Which resolution would you like? Please give the number for one axis, it will be squared automatically."))
+    return dimension;
+}
+
+// create function to remove old grid and create new grid with the new dimensions
+function replaceGrid() {
+    containerDiv.replaceChildren();
     createGrid(dimension);
-    // functionality to replace the existing grid node is still missing (remove and add the newly created grid as a replacement)
-    // it seems that dimension is not being replaced -> scope?
-    // eventlisteners need to be added to the new cells
 }
 
 // select reset button
