@@ -22,21 +22,21 @@ for (let i = 0; i < ( (dimension*dimension) ); i++) {
 // initially load a grid with the default dimension
 createGrid(dimension);
 
-// select cells
-const cells = document.querySelectorAll(".cell");
-
 function runEtchASketch() {
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them
-function changeCellAppearance(targetCell) {
+    function changeCellAppearance(targetCell) {
     targetCell.classList.add("mouseoverCell");
-} 
-// add EventListener to call changeCellAppearance on each cell
-cells.forEach((cell) => {
-    cell.addEventListener("mouseover", (e) => {
-        changeCellAppearance(e.target);
+    } 
+    // select cells
+    const cells = document.querySelectorAll(".cell");
+    // add EventListener to call changeCellAppearance on each cell
+    cells.forEach((cell) => {
+       cell.addEventListener("mouseover", (e) => {
+          changeCellAppearance(e.target);
+          });
     });
-});
 }
+
 runEtchASketch();
 
 // select resize button
@@ -48,7 +48,8 @@ resizeButton.addEventListener("click", resizeGrid);
 function resizeGrid() {
     changeDimension();
     replaceGrid();
-    // console.log("Function resizeGrid was called.");
+    runEtchASketch();
+    // this has a bug and does not work as expected - I am not sure why the function is not working properly?
 }
 
 
@@ -62,7 +63,6 @@ function changeDimension() {
 function replaceGrid() {
     containerDiv.replaceChildren();
     createGrid(dimension);
-    runEtchASketch();
 }
 
 // select reset button
@@ -71,9 +71,8 @@ const resetButton = document.querySelector("#resetButton");
 // add EventListener to reset button
 resetButton.addEventListener("click", resetGrid);
 
-
-// create function to remove mouseoverCell class (in order to reset the grid)
 function resetGrid() {
+    const cells = document.querySelectorAll(".cell");
     cells.forEach((cell) => {
         cell.classList.remove("mouseoverCell");
     })

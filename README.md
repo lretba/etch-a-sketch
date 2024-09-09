@@ -28,6 +28,10 @@ Research button tags in HTML and how you can make a JavaScript function run when
 Also check out prompts.
 You should be able to enter 64 and have a brand new 64x64 grid pop up without changing the total amount of pixels used.
 
+// OPEN TODOS: 
+- make grid always square
+- re-enable eventlisteners (runEtchASketch function)
+
 [NOT YET STARTED]
 Push your project to GitHub!
 
