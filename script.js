@@ -19,19 +19,17 @@ for (let i = 0; i < ( (dimension*dimension) ); i++) {
 }
 }
 
-// initially load a grid with the default dimension of 16
+// initially load a grid with the default dimension
 createGrid(dimension);
 
+// select cells
+const cells = document.querySelectorAll(".cell");
 
 function runEtchASketch() {
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them
 function changeCellAppearance(targetCell) {
     targetCell.classList.add("mouseoverCell");
-}
-
-// select cells
-const cells = document.querySelectorAll(".cell");
- 
+} 
 // add EventListener to call changeCellAppearance on each cell
 cells.forEach((cell) => {
     cell.addEventListener("mouseover", (e) => {

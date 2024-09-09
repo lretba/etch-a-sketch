@@ -5,6 +5,8 @@
     font-family: "Roboto", sans-serif;
 }
 
+
+
 .grid {
     border: 1px dotted grey;
 }
@@ -25,7 +27,9 @@
 }
 
 .cell {
-    flex: 1 1 6.25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 6.25%;
     aspect-ratio: 1/1;
 }
 
