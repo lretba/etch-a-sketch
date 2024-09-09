@@ -23,7 +23,7 @@ for (let i = 0; i < ( (dimension*dimension) ); i++) {
 createGrid(dimension);
 
 
-
+function runEtchASketch() {
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them
 function changeCellAppearance(targetCell) {
     targetCell.classList.add("mouseoverCell");
@@ -31,13 +31,15 @@ function changeCellAppearance(targetCell) {
 
 // select cells
 const cells = document.querySelectorAll(".cell");
-
+ 
 // add EventListener to call changeCellAppearance on each cell
 cells.forEach((cell) => {
     cell.addEventListener("mouseover", (e) => {
         changeCellAppearance(e.target);
-    })
-})
+    });
+});
+}
+runEtchASketch();
 
 // select resize button
 const resizeButton = document.querySelector("#resizeButton");
@@ -62,6 +64,7 @@ function changeDimension() {
 function replaceGrid() {
     containerDiv.replaceChildren();
     createGrid(dimension);
+    runEtchASketch();
 }
 
 // select reset button
