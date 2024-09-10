@@ -31,8 +31,8 @@ You should be able to enter 64 and have a brand new 64x64 grid pop up without ch
 [NOT YET STARTED]
 Push your project to GitHub!
 
-[CURRENT]
+[DONE]
 Extra credit
 Transform the behavior of a square when interacting with the mouse by introducing a series of modifications.
 - [DONE] Rather than squares being the same color throughout the grid, randomize the squares’ RGB values with each interaction.
-- Additionally, implement a progressive darkening effect where each interaction darkens the square by 10%. The goal is to achieve a fully black (or completely colored) square in only ten interactions.
+- [DONE] Additionally, implement a progressive darkening effect where each interaction darkens the square by 10%. The goal is to achieve a fully black (or completely colored) square in only ten interactions.

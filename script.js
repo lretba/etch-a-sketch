@@ -31,8 +31,8 @@ function runEtchASketch() {
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them. Randomize RGB colors.
     function changeCellAppearance(targetCell) {
         if (targetCell.style.opacity == "0.1") {
-            let redRandom  = getRandomInt(256);
-            let greenRandom = getRandomInt(256);
+            let redRandom  = getRandomInt(10);
+            let greenRandom = getRandomInt(100);
             let blueRandom = getRandomInt(256);
             targetCell.style.backgroundColor = `rgb(${redRandom}, ${greenRandom}, ${blueRandom})`;
             targetCell.style.opacity = "0.2";
