@@ -96,9 +96,7 @@ resetButton.addEventListener("click", resetGrid);
 function resetGrid() {
     const cells = document.querySelectorAll(".cell");
     cells.forEach((cell) => {
-        cell.classList.remove("mouseoverCell");
+        cell.style.backgroundColor = "#FFFFFF";
+        cell.style.opacity = 0.1;
     })
 }
-
-
-// clearCanvas button is now broken - needs editing :) 
