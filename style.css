@@ -32,10 +32,7 @@
 
 .cell {
     flex: 1 1 auto;
-}
-
-.mouseoverCell {
-    background-color: indigo;
+    background-color: #FFFFFF;
 }
 
 h1 {

@@ -10,6 +10,7 @@ function createGrid(dimension) {
         for (let i = 0; i < dimension; i++) {
             let gridCell = document.createElement("div")
             gridCell.classList.add("cell", "grid");
+            gridCell.style.opacity = "0.1";
             gridRow.appendChild(gridCell);
             }
         gridRow.classList.add("flexrow");
@@ -29,10 +30,18 @@ function getRandomInt(max) {
 function runEtchASketch() {
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them. Randomize RGB colors.
     function changeCellAppearance(targetCell) {
-        let redRandom  = getRandomInt(256);
-        let greenRandom = getRandomInt(256);
-        let blueRandom = getRandomInt(256);
-        targetCell.style.backgroundColor = `rgb(${redRandom}, ${greenRandom}, ${blueRandom})`;
+        if (targetCell.style.opacity == "0.1") {
+            let redRandom  = getRandomInt(256);
+            let greenRandom = getRandomInt(256);
+            let blueRandom = getRandomInt(256);
+            targetCell.style.backgroundColor = `rgb(${redRandom}, ${greenRandom}, ${blueRandom})`;
+            targetCell.style.opacity = "0.2";
+        }
+        else {
+            let oldOpacity = parseFloat(targetCell.style.opacity);
+            let newOpacity =  Math.min(oldOpacity + 0.1, 1);
+            targetCell.style.opacity = `${newOpacity}`;
+        }
     } 
     // select cells
     const cells = document.querySelectorAll(".cell");
@@ -90,3 +99,6 @@ function resetGrid() {
         cell.classList.remove("mouseoverCell");
     })
 }
+
+
+// clearCanvas button is now broken - needs editing :) 
