@@ -45,16 +45,22 @@ resizeButton.addEventListener("click", resizeGrid);
 
 function resizeGrid() {
     changeDimension();
-    replaceGrid();
-    runEtchASketch();
-    // this has a bug and does not work as expected - I am not sure why the function is not working properly?
+    if (dimension < 100) {
+        replaceGrid();
+        runEtchASketch();
+    }
 }
 
 
 // create function(s) to prompt user for new grid size and change grid size 
 function changeDimension() {
     dimension = Number(prompt("Which resolution would you like? Please give the number for one axis, it will be squared automatically."))
-    return dimension;
+    if (dimension < 100 ) {
+        return dimension;
+    }
+    else {
+        alert("Unfortunately, the browser can not easily support a resolution bigger than 100x100. Please select a number between 1-100. Thank you!");
+    }
 }
 
 // create function to remove old grid and create new grid with the new dimensions
