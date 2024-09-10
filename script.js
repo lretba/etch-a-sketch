@@ -20,10 +20,19 @@ function createGrid(dimension) {
 // initially load a grid with the default dimension
 createGrid(dimension);
 
+
+// Get random number
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
 function runEtchASketch() {
-// Set up a “hover” effect so that the grid divs change color when your mouse passes over them
+// Set up a “hover” effect so that the grid divs change color when your mouse passes over them. Randomize RGB colors.
     function changeCellAppearance(targetCell) {
-    targetCell.classList.add("mouseoverCell");
+        let redRandom  = getRandomInt(256);
+        let greenRandom = getRandomInt(256);
+        let blueRandom = getRandomInt(256);
+        targetCell.style.backgroundColor = `rgb(${redRandom}, ${greenRandom}, ${blueRandom})`;
     } 
     // select cells
     const cells = document.querySelectorAll(".cell");
